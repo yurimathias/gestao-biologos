@@ -13,7 +13,22 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Home') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('biologos.index')" :active="request()->routeIs(['biologos.index', 'biologos.create', 'biologos.edit', 'biologos.show'])">
+                        {{ __('Biólogos') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('areas.index')" :active="request()->routeIs(['areas.index', 'areas.create', 'areas.edit', 'areas.show'])">
+                        {{ __('Áreas') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('animais.index')" :active="request()->routeIs(['animais.index', 'animais.create', 'animais.edit', 'animais.show'])">
+                        {{ __('Animais') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('plantas.index')" :active="request()->routeIs(['plantas.index', 'plantas.create', 'plantas.edit', 'plantas.show'])">
+                        {{ __('Plantas') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('relatorios.index')" :active="request()->routeIs(['relatorios.index', 'relatorios.create', 'relatorios.edit', 'relatorios.show'])">
+                        {{ __('Relatórios') }}
                     </x-nav-link>
                 </div>
             </div>
